@@ -2,6 +2,7 @@ import React from 'react';
 import HeroSection from '../components/HeroSection';
 import NagercoilSection from '../components/NagercoilSection';
 import AboutSection from '../components/AboutSection';
+import LearnMoreSection from '../components/LearnMoreSection';
 import FaqSection from '../components/FaqSection';
 import './Home.css';
 
@@ -11,7 +12,8 @@ const Home = () => {
       <HeroSection />
       <NagercoilSection />
       <AboutSection />
-      <FaqSection />
+      <LearnMoreSection />
+      {/* <FaqSection /> */}
     </div>
   );
 };

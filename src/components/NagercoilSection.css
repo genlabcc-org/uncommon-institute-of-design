@@ -120,18 +120,22 @@
 
 @media (max-width: 850px) {
   .city-section {
-    padding: 2.5rem 1.5rem 0 1.5rem;
+    padding: 2.5rem 0 0 0;
     min-height: auto;
   }
 
   .city-container {
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
+    max-width: 100%;
   }
 
   .city-text-wrapper {
     margin-right: 0;
     max-width: 100%;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
   }
 
   .city-subheading {
@@ -148,20 +152,29 @@
     max-width: 100%;
     justify-content: center;
     margin-top: 1rem;
+    margin-bottom: 0;
+    padding: 0;
     overflow: visible;
   }
 
   .city-landmark-img {
-    max-height: 46vh;
-    transform: scale(1.18);
-    transform-origin: bottom center;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    transform: none;
+    object-fit: contain;
     object-position: bottom center;
+    display: block;
   }
 }
 
 @media (max-width: 500px) {
   .city-section {
-    padding: 2rem 1rem 0 1rem;
+    padding: 2rem 0 0 0;
+  }
+
+  .city-text-wrapper {
+    padding: 0 1.25rem;
   }
 
   .city-subheading {
@@ -172,9 +185,18 @@
     font-size: clamp(3rem, 16vw, 85px);
   }
 
+  .city-image-wrapper {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0.75rem;
+  }
+
   .city-landmark-img {
-    max-height: 40vh;
-    transform: scale(1.15);
-    transform-origin: bottom center;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    transform: none;
+    object-fit: contain;
+    object-position: bottom center;
   }
 }

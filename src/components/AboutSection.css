@@ -6,13 +6,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #52008f;
-  background-image: url('/bg.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: transparent;
   padding: 0 24px;
-  margin: -2px 0 0 0;
+  margin: 0;
   border: none !important;
   border-top: none !important;
   outline: none !important;
@@ -28,8 +24,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 clamp(24px, 8vw, 120px);
+  padding: 0 clamp(32px, 9vw, 140px);
   box-sizing: border-box;
+  position: relative;
+  z-index: 5;
   border: none;
 }
 
@@ -50,7 +48,7 @@
   line-height: clamp(1.6rem, 3.1vw, 49.07px);
   letter-spacing: 0;
   text-align: center;
-  color: #ffffff;
+  color: #52008f;
   margin: 0;
   text-wrap: balance;
 }
@@ -62,7 +60,7 @@
   font-style: normal;
   line-height: inherit;
   letter-spacing: 0;
-  color: #ffffff;
+  color: #52008f;
 }
 
 /* Tablet & Mobile responsive adjustments */
@@ -106,4 +104,3 @@
     line-height: 1.25;
   }
 }
-

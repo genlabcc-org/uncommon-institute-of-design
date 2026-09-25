@@ -1,0 +1,277 @@
+.learn-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffd000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 2rem 0 0 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Left Pink/Magenta Star behind person */
+.learn-star-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: clamp(340px, 38vw, 560px);
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+  transform: translate(-14%, -6%) rotate(-8deg);
+  display: block;
+}
+
+.learn-container {
+  width: 100%;
+  max-width: 1540px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+  min-height: 90vh;
+}
+
+/* Left: Person illustration with white sticker border */
+.learn-person-wrapper {
+  flex: 0 0 46%;
+  max-width: 650px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  line-height: 0;
+  margin-bottom: 0;
+  padding-left: 2rem;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 5;
+}
+
+.learn-person-img {
+  width: 100%;
+  height: auto;
+  max-height: 88vh;
+  object-fit: contain;
+  object-position: bottom left;
+  display: block;
+}
+
+/* Right: Content Wrapper */
+.learn-content-wrapper {
+  flex: 1;
+  max-width: 820px;
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem 4rem 2.5rem 2rem;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 5;
+}
+
+/* Top Right: Logo */
+.learn-logo-wrapper {
+  align-self: flex-end;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.learn-logo-img {
+  max-width: 220px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Center: Tamil Heading & Button */
+.learn-text-wrapper {
+  width: 100%;
+  margin: auto 0;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.learn-tamil-heading {
+  font-family: 'Eternal', 'Mukta Malar', 'Anek Tamil', 'Noto Sans Tamil', sans-serif;
+  font-size: clamp(2.4rem, 4.3vw, 58.43px);
+  font-weight: 400;
+  font-style: normal;
+  line-height: 134%;
+  color: #000000;
+  letter-spacing: 0;
+  text-align: right;
+  margin: 0 0 2rem 0;
+}
+
+.learn-tamil-red {
+  font-family: 'Eternal', 'Mukta Malar', 'Anek Tamil', 'Noto Sans Tamil', sans-serif;
+  color: #e60000;
+  font-weight: 400;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: 0;
+}
+
+.learn-cta-wrapper {
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+}
+
+.learn-register-btn {
+  background-color: #6a00b0;
+  color: #ffffff;
+  font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0.95rem 3rem;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.2s ease, filter 0.2s ease;
+  box-shadow: none;
+}
+
+.learn-register-btn:hover {
+  transform: translateY(-2px);
+  background-color: #7b05ca;
+  filter: brightness(1.08);
+}
+
+.learn-register-btn:active {
+  transform: translateY(1px);
+}
+
+/* Bottom Right: Address and Contact details */
+.learn-contact-wrapper {
+  align-self: flex-end;
+  text-align: right;
+  margin-top: 2rem;
+}
+
+.learn-address,
+.learn-phone,
+.learn-website {
+  font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+  font-size: clamp(1rem, 1.35vw, 1.22rem);
+  font-weight: 600;
+  color: #000000;
+  margin: 0 0 0.35rem 0;
+  letter-spacing: -0.01em;
+}
+
+.learn-phone a,
+.learn-website a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.learn-phone a:hover,
+.learn-website a:hover {
+  color: #52008f;
+  text-decoration: underline;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+  .learn-content-wrapper {
+    padding: 1.5rem 2.5rem 2rem 1.5rem;
+  }
+
+  .learn-tamil-heading {
+    font-size: clamp(2.3rem, 4.4vw, 3.8rem);
+  }
+
+  .learn-logo-img {
+    max-width: 190px;
+  }
+}
+
+@media (max-width: 900px) {
+  .learn-section {
+    min-height: auto;
+    padding: 2.5rem 0 0 0;
+  }
+
+  .learn-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    min-height: auto;
+  }
+
+  .learn-content-wrapper {
+    width: 100%;
+    max-width: 100%;
+    min-height: auto;
+    padding: 0 1.5rem 2rem 1.5rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .learn-logo-wrapper {
+    align-self: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .learn-text-wrapper {
+    text-align: center;
+  }
+
+  .learn-tamil-heading {
+    text-align: center;
+    font-size: clamp(2rem, 6.5vw, 3rem);
+    margin-bottom: 1.5rem;
+  }
+
+  .learn-cta-wrapper {
+    justify-content: center;
+  }
+
+  .learn-contact-wrapper {
+    align-self: center;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .learn-person-wrapper {
+    width: 100%;
+    max-width: 480px;
+    padding-left: 0;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .learn-person-img {
+    max-height: 60vh;
+    object-position: bottom center;
+  }
+}
+
+@media (max-width: 480px) {
+  .learn-tamil-heading {
+    font-size: clamp(1.7rem, 6.8vw, 2.3rem);
+  }
+
+  .learn-register-btn {
+    font-size: 1.05rem;
+    padding: 0.8rem 2.2rem;
+  }
+
+  .learn-address,
+  .learn-phone,
+  .learn-website {
+    font-size: 0.95rem;
+  }
+}

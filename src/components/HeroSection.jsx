@@ -39,9 +39,15 @@ const HeroSection = () => {
         </p>
 
         {/* Purple Rounded Register Now Button */}
-        <button className="hero-register-btn" id="hero-register-now-btn">
+        <a
+          href="https://luma.com/fk3rbn8c"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hero-register-btn"
+          id="hero-register-now-btn"
+        >
           Register Now
-        </button>
+        </a>
       </div>
 
       {/* Right Ornate Border Pillar */}
