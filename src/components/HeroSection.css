@@ -1,0 +1,158 @@
+.hero-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('/herobg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #f7bb03;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+/* Main Center Content */
+.hero-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  z-index: 10;
+}
+
+.hero-badge-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 560px;
+  width: 100%;
+}
+
+.hero-title-img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Register Now Button */
+.hero-register-btn {
+  margin-top: 2rem;
+  background-color: #e2007a;
+  background: linear-gradient(90deg, #db0073 0%, #e2007a 50%, #db0073 100%);
+  color: #ffffff;
+  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.9rem 2.75rem;
+  border: 3.5px solid #000000;
+  border-radius: 9999px;
+  box-shadow: 4px 4px 0 #000000;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.hero-register-btn:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 7px 7px 0 #000000;
+  filter: brightness(1.08);
+}
+
+.hero-register-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #000000;
+}
+
+/* Bottom Pink Info Bar */
+.hero-bottom-bar {
+  width: 100%;
+  background: #e2007a;
+  background: linear-gradient(90deg, #db0073 0%, #e2007a 50%, #db0073 100%);
+  padding: 1.25rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 -4px 20px rgba(226, 0, 122, 0.2);
+  z-index: 10;
+}
+
+.hero-info-item {
+  color: #ffffff;
+  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+}
+
+.hero-info-center {
+  text-align: center;
+}
+
+.hero-info-right {
+  text-align: right;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 900px) {
+  .hero-title-img {
+    max-width: 380px;
+  }
+
+  .hero-register-btn {
+    font-size: 1.05rem;
+    padding: 0.8rem 2.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .hero-bottom-bar {
+    padding: 1.1rem 2rem;
+  }
+
+  .hero-info-item {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-main {
+    padding: 1.5rem 1rem;
+  }
+
+  .hero-title-img {
+    max-width: 300px;
+  }
+
+  .hero-register-btn {
+    font-size: 0.98rem;
+    padding: 0.75rem 2rem;
+    margin-top: 1.25rem;
+    border-width: 3px;
+    box-shadow: 3px 3px 0 #000000;
+  }
+
+  .hero-bottom-bar {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.25rem 1rem;
+    text-align: center;
+  }
+
+  .hero-info-item {
+    font-size: 1rem;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero-info-right {
+    text-align: center;
+  }
+}
