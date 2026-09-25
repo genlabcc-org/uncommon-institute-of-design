@@ -205,70 +205,133 @@
   .learn-section {
     min-height: auto;
     padding: 2.5rem 0 0 0;
+    overflow: hidden;
   }
 
   .learn-container {
     flex-direction: column-reverse;
     align-items: center;
     min-height: auto;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .learn-star-left {
+    width: clamp(260px, 75vw, 420px);
+    top: auto;
+    bottom: 40px;
+    left: -20px;
+    transform: rotate(-8deg);
   }
 
   .learn-content-wrapper {
     width: 100%;
     max-width: 100%;
     min-height: auto;
-    padding: 0 1.5rem 2rem 1.5rem;
+    padding: 0 1.5rem 1.5rem 1.5rem;
     align-items: center;
     text-align: center;
   }
 
   .learn-logo-wrapper {
     align-self: center;
-    margin-bottom: 1.5rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+  .learn-logo-img {
+    max-width: 180px;
   }
 
   .learn-text-wrapper {
     text-align: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1.5rem;
   }
 
   .learn-tamil-heading {
     text-align: center;
-    font-size: clamp(2rem, 6.5vw, 3rem);
-    margin-bottom: 1.5rem;
+    font-size: clamp(2rem, 6.8vw, 2.9rem);
+    line-height: 1.3;
+    margin-bottom: 1.75rem;
   }
 
   .learn-cta-wrapper {
+    align-self: center;
     justify-content: center;
+    width: 100%;
+  }
+
+  .learn-register-btn {
+    font-size: 1.15rem;
+    padding: 0.9rem 2.8rem;
+    min-width: 220px;
+  }
+
+  .learn-person-wrapper {
+    width: 100%;
+    max-width: 440px;
+    padding-left: 0;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+
+  .learn-person-img {
+    max-height: 52vh;
+    object-position: bottom center;
   }
 
   .learn-contact-wrapper {
     align-self: center;
     text-align: center;
     margin-top: 2rem;
-  }
-
-  .learn-person-wrapper {
     width: 100%;
-    max-width: 480px;
-    padding-left: 0;
-    justify-content: center;
-    margin-top: 1rem;
   }
 
-  .learn-person-img {
-    max-height: 60vh;
-    object-position: bottom center;
+  .learn-address,
+  .learn-phone,
+  .learn-website {
+    font-size: 1.05rem;
+    line-height: 1.5;
   }
 }
 
 @media (max-width: 480px) {
+  .learn-section {
+    padding: 2rem 0 0 0;
+  }
+
+  .learn-logo-img {
+    max-width: 155px;
+    margin-bottom: 0.5rem;
+  }
+
+  .learn-star-left {
+    width: clamp(240px, 78vw, 320px);
+    bottom: 20px;
+    left: -15px;
+  }
+
+  .learn-person-wrapper {
+    max-width: 340px;
+  }
+
+  .learn-person-img {
+    max-height: 45vh;
+  }
+
   .learn-tamil-heading {
-    font-size: clamp(1.7rem, 6.8vw, 2.3rem);
+    font-size: clamp(1.65rem, 6.8vw, 2.2rem);
+    margin-bottom: 1.4rem;
   }
 
   .learn-register-btn {
     font-size: 1.05rem;
-    padding: 0.8rem 2.2rem;
+    padding: 0.85rem 2.2rem;
+    min-width: 200px;
   }
 
   .learn-address,

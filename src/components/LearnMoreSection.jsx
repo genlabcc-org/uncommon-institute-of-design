@@ -56,14 +56,14 @@ const LearnMoreSection = () => {
           {/* Bottom Right: Contact & Address Information */}
           <div className="learn-contact-wrapper">
             <p className="learn-address">
-              Address: 2nd Floor, MaRK 9 Office, Chettikulam
+              Address: 2nd Floor, MARK 9 Office, Chettikulam
             </p>
             <p className="learn-phone">
               Contact No : <a href="tel:9994535121">99945 35121</a>
             </p>
             <p className="learn-website">
               <a href="https://www.mark9.cc" target="_blank" rel="noopener noreferrer">
-                www.mark9.cc
+                www.MARK9.cc
               </a>
             </p>
           </div>
