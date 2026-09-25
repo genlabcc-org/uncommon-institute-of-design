@@ -1,0 +1,180 @@
+.city-section {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  background-color: #ffd000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 3rem 0 0 4rem;
+  margin: 0;
+  overflow: visible;
+  z-index: 5;
+}
+
+.city-container {
+  width: 100%;
+  max-width: 1540px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+/* Left Typography Content */
+.city-text-wrapper {
+  flex: 1;
+  max-width: 860px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 10;
+  position: relative;
+  margin-right: -6vw;
+}
+
+.city-subheading {
+  font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+  font-size: clamp(2rem, 3.4vw, 2.9rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #52008f;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.75rem 0;
+}
+
+/* Giant "NAGERCOIL" Headline */
+.city-main-heading {
+  font-family: 'Clash Display', 'Outfit', sans-serif;
+  font-size: clamp(5.5rem, 13.5vw, 215px);
+  font-weight: 600;
+  font-style: normal;
+  line-height: 0.88;
+  letter-spacing: 0;
+  color: #52008f;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  margin-bottom: -0.04em;
+  white-space: nowrap;
+}
+
+/* Right Bottom Landmark Illustration */
+.city-image-wrapper {
+  flex: 0 0 48%;
+  max-width: 680px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  line-height: 0;
+  margin-bottom: 0;
+  z-index: 2;
+  position: relative;
+  overflow: visible;
+}
+
+.city-landmark-img {
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
+  object-fit: contain;
+  object-position: bottom right;
+  display: block;
+  transform: scale(1.35);
+  transform-origin: bottom right;
+  pointer-events: none;
+  filter: drop-shadow(0 -4px 16px rgba(0, 0, 0, 0.04));
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+  .city-section {
+    padding: 2.5rem 0 0 2.5rem;
+    min-height: auto;
+  }
+
+  .city-text-wrapper {
+    margin-right: -4vw;
+  }
+
+  .city-main-heading {
+    font-size: clamp(4.5rem, 12vw, 175px);
+  }
+
+  .city-image-wrapper {
+    flex: 0 0 48%;
+    max-width: 580px;
+  }
+
+  .city-landmark-img {
+    max-height: 52vh;
+    transform: scale(1.28);
+    transform-origin: bottom right;
+  }
+}
+
+@media (max-width: 850px) {
+  .city-section {
+    padding: 2.5rem 1.5rem 0 1.5rem;
+    min-height: auto;
+  }
+
+  .city-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .city-text-wrapper {
+    margin-right: 0;
+    max-width: 100%;
+  }
+
+  .city-subheading {
+    font-size: 1.85rem;
+  }
+
+  .city-main-heading {
+    font-size: clamp(3.8rem, 14vw, 120px);
+    white-space: normal;
+  }
+
+  .city-image-wrapper {
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+    overflow: visible;
+  }
+
+  .city-landmark-img {
+    max-height: 46vh;
+    transform: scale(1.18);
+    transform-origin: bottom center;
+    object-position: bottom center;
+  }
+}
+
+@media (max-width: 500px) {
+  .city-section {
+    padding: 2rem 1rem 0 1rem;
+  }
+
+  .city-subheading {
+    font-size: 1.45rem;
+  }
+
+  .city-main-heading {
+    font-size: clamp(3rem, 16vw, 85px);
+  }
+
+  .city-landmark-img {
+    max-height: 40vh;
+    transform: scale(1.15);
+    transform-origin: bottom center;
+  }
+}

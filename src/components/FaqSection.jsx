@@ -38,16 +38,7 @@ const FaqSection = () => {
   return (
     <section className="faq-section" id="faq">
       <div className="faq-container">
-        {/* Left Character Illustration */}
-        <div className="faq-person-wrapper">
-          <img 
-            src="/faqperson.png" 
-            alt="FAQ Presenter" 
-            className="faq-person-img"
-          />
-        </div>
-
-        {/* Right FAQ Content & Accordions */}
+        {/* Centered FAQ Content & Accordions */}
         <div className="faq-content">
           <h2 className="faq-title">Your Questions Answered</h2>
 

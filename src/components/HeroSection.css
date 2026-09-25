@@ -2,15 +2,34 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-image: url('/herobg.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #f7bb03;
+  background-color: #ffd000;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   overflow: hidden;
+  padding-bottom: 1.5rem;
+}
+
+/* Left & Right Ornate Border Pillars (Strictly 100vh height only) */
+.hero-border-left,
+.hero-border-right {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  max-height: 100vh;
+  width: auto;
+  max-width: 160px;
+  object-fit: cover;
+  object-position: center;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.hero-border-left {
+  left: 0;
+}
+
+.hero-border-right {
+  right: 0;
 }
 
 /* Main Center Content */
@@ -21,7 +40,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 10rem 3rem 10rem;
   z-index: 10;
 }
 
@@ -31,128 +50,156 @@
   align-items: center;
   max-width: 560px;
   width: 100%;
+  margin-bottom: 1.75rem;
 }
 
 .hero-title-img {
   width: 100%;
-  max-width: 480px;
+  max-width: 490px;
   height: auto;
   object-fit: contain;
 }
 
-/* Register Now Button */
-.hero-register-btn {
-  margin-top: 2rem;
-  background-color: #e2007a;
-  background: linear-gradient(90deg, #db0073 0%, #e2007a 50%, #db0073 100%);
-  color: #ffffff;
-  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
-  font-size: 1.2rem;
+/* Date Ticket Stamp Image */
+.hero-date-badge {
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 1.25rem;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.12));
+}
+
+/* Venue Information Line */
+.hero-venue-text {
+  font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+  font-size: 1.18rem;
+  font-weight: 600;
+  color: #000000;
+  letter-spacing: -0.01em;
+  margin: 0 0 1.5rem 0;
+}
+
+.hero-venue-text strong {
   font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  padding: 0.9rem 2.75rem;
-  border: 3.5px solid #000000;
-  border-radius: 9999px;
-  box-shadow: 4px 4px 0 #000000;
+}
+
+/* Purple Rounded Rectangle Register Now Button */
+.hero-register-btn {
+  background-color: #8a05c7;
+  color: #ffffff;
+  font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+  font-size: 1.22rem;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  padding: 0.85rem 2.6rem;
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(138, 5, 199, 0.3);
   cursor: pointer;
   transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease, filter 0.2s ease;
 }
 
 .hero-register-btn:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 7px 7px 0 #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 7px 20px rgba(138, 5, 199, 0.4);
   filter: brightness(1.08);
 }
 
 .hero-register-btn:active {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 #000000;
-}
-
-/* Bottom Pink Info Bar */
-.hero-bottom-bar {
-  width: 100%;
-  background: #e2007a;
-  background: linear-gradient(90deg, #db0073 0%, #e2007a 50%, #db0073 100%);
-  padding: 1.25rem 4rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 -4px 20px rgba(226, 0, 122, 0.2);
-  z-index: 10;
-}
-
-.hero-info-item {
-  color: #ffffff;
-  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
-  font-size: 1.25rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  display: flex;
-  align-items: center;
-}
-
-.hero-info-center {
-  text-align: center;
-}
-
-.hero-info-right {
-  text-align: right;
+  transform: translateY(1px);
+  box-shadow: 0 2px 8px rgba(138, 5, 199, 0.25);
 }
 
 /* Responsive Breakpoints */
-@media (max-width: 900px) {
-  .hero-title-img {
-    max-width: 380px;
+@media (max-width: 1080px) {
+  .hero-border-left,
+  .hero-border-right {
+    max-width: 120px;
   }
 
-  .hero-register-btn {
-    font-size: 1.05rem;
-    padding: 0.8rem 2.25rem;
-    margin-top: 1.5rem;
-  }
-
-  .hero-bottom-bar {
-    padding: 1.1rem 2rem;
-  }
-
-  .hero-info-item {
-    font-size: 1.05rem;
-  }
-}
-
-@media (max-width: 640px) {
   .hero-main {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 7.5rem 2.5rem 7.5rem;
   }
 
   .hero-title-img {
+    max-width: 420px;
+  }
+
+  .hero-date-badge {
     max-width: 300px;
   }
 
+  .hero-venue-text {
+    font-size: 1.08rem;
+  }
+
   .hero-register-btn {
-    font-size: 0.98rem;
-    padding: 0.75rem 2rem;
-    margin-top: 1.25rem;
-    border-width: 3px;
-    box-shadow: 3px 3px 0 #000000;
+    font-size: 1.12rem;
+    padding: 0.8rem 2.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    padding-bottom: 3rem;
   }
 
-  .hero-bottom-bar {
-    flex-direction: column;
-    gap: 0.75rem;
-    padding: 1.25rem 1rem;
-    text-align: center;
+  .hero-border-left,
+  .hero-border-right {
+    max-width: 75px;
   }
 
-  .hero-info-item {
+  .hero-main {
+    padding: 1.25rem 4.5rem 2rem 4.5rem;
+  }
+
+  .hero-title-img {
+    max-width: 340px;
+  }
+
+  .hero-date-badge {
+    max-width: 250px;
+  }
+
+  .hero-venue-text {
     font-size: 1rem;
-    justify-content: center;
-    width: 100%;
+    margin-bottom: 1.25rem;
   }
 
-  .hero-info-right {
-    text-align: center;
+  .hero-register-btn {
+    font-size: 1.05rem;
+    padding: 0.75rem 2rem;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 540px) {
+  .hero-border-left,
+  .hero-border-right {
+    max-width: 45px;
+    opacity: 0.85;
+  }
+
+  .hero-main {
+    padding: 1rem 3rem 2rem 3rem;
+  }
+
+  .hero-title-img {
+    max-width: 280px;
+  }
+
+  .hero-date-badge {
+    max-width: 210px;
+  }
+
+  .hero-venue-text {
+    font-size: 0.92rem;
+  }
+
+  .hero-register-btn {
+    font-size: 0.95rem;
+    padding: 0.7rem 1.75rem;
   }
 }

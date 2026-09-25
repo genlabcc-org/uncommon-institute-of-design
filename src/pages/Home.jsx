@@ -1,7 +1,7 @@
 import React from 'react';
 import HeroSection from '../components/HeroSection';
+import NagercoilSection from '../components/NagercoilSection';
 import AboutSection from '../components/AboutSection';
-import QuoteSection from '../components/QuoteSection';
 import FaqSection from '../components/FaqSection';
 import './Home.css';
 
@@ -9,8 +9,8 @@ const Home = () => {
   return (
     <div className="home-page">
       <HeroSection />
+      <NagercoilSection />
       <AboutSection />
-      <QuoteSection />
       <FaqSection />
     </div>
   );

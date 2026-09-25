@@ -1,251 +1,109 @@
 .about-section {
   position: relative;
   width: 100%;
+  height: 100vh;
   min-height: 100vh;
-  background-image: url('/aboutbg.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 3rem 4rem;
+  background-color: #52008f;
+  background-image: url('/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0 24px;
+  margin: -2px 0 0 0;
+  border: none !important;
+  border-top: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  box-sizing: border-box;
   overflow: hidden;
 }
 
 .about-container {
   width: 100%;
-  max-width: 1360px;
+  max-width: 1280px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 3rem;
-  z-index: 10;
+  justify-content: center;
+  padding: 0 clamp(24px, 8vw, 120px);
+  box-sizing: border-box;
+  border: none;
 }
 
-/* Left: About Us Comic Logo (Positioned high up in top-left) */
-.about-logo-wrapper {
-  flex: 0 0 45%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  align-self: flex-start;
-  margin-top: -6.5rem;
-  margin-left: -3rem;
-  padding-bottom: 0;
-}
-
-.about-logo-img {
+.about-content {
   width: 100%;
-  max-width: 480px;
-  height: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.08));
+  max-width: 1060px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Right: Styled Quote Content Box (Centered) */
-.about-content-wrapper {
-  flex: 0 0 54%;
-  max-width: 660px;
-  position: relative;
-  padding: 2.25rem 2rem 2.5rem 2rem;
-  margin-top: 0;
-  margin-left: -1.5rem;
-  align-self: center;
-}
-
-/* Decorative Outer Frame Line */
-.about-outer-frame {
-  position: absolute;
-  top: 1rem;
-  left: 0.5rem;
-  width: calc(100% - 3.5rem);
-  height: calc(100% - 0.75rem);
-  border-left: 4px solid #000000;
-  border-bottom: 4px solid #000000;
-  border-bottom-left-radius: 44px;
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* Main Yellow Quote Card */
-.about-card {
-  position: relative;
-  background-color: #ffd000;
-  background: linear-gradient(180deg, #ffd814 0%, #ffd000 100%);
-  border: 4.5px solid #000000;
-  border-radius: 38px;
-  padding: 3.25rem 2.75rem 3rem 2.75rem;
-  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.08);
-  z-index: 2;
-}
-
-/* Yellow Quote SVGs with Black Outlines */
-.about-quote-svg {
-  position: absolute;
-  width: 60px;
-  height: 50px;
-  z-index: 4;
-}
-
-.quote-top-left {
-  top: -1.75rem;
-  left: 1.75rem;
-}
-
-.quote-bottom-right {
-  bottom: -2rem;
-  right: 1.75rem;
-}
-
-/* Dotted Accents (Black Square Dots) */
-.dot-grid {
-  position: absolute;
-  display: grid;
-  gap: 5px;
-  z-index: 3;
-}
-
-.dot {
-  width: 6px;
-  height: 6px;
-  background-color: #000000;
-  border-radius: 1px;
-}
-
-/* Top dots (horizontal next to top quotes) */
-.dots-top {
-  top: -0.9rem;
-  left: 6.25rem;
-  grid-template-columns: repeat(6, 6px);
-  grid-template-rows: repeat(2, 6px);
-}
-
-/* Bottom dots (horizontal next to bottom quotes) */
-.dots-bottom {
-  bottom: -0.9rem;
-  right: 6.25rem;
-  grid-template-columns: repeat(8, 6px);
-  grid-template-rows: repeat(2, 6px);
-}
-
-/* Left outer dots */
-.dots-left {
-  left: -0.75rem;
-  bottom: 3rem;
-  grid-template-columns: repeat(2, 6px);
-  grid-template-rows: repeat(4, 6px);
-}
-
-/* Right outer dots */
-.dots-right {
-  right: -0.75rem;
-  top: 3.25rem;
-  grid-template-columns: repeat(2, 6px);
-  grid-template-rows: repeat(4, 6px);
-}
-
-/* Text Content */
 .about-text {
-  font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
-  font-size: 1.15rem;
-  line-height: 1.75;
+  font-family: 'Clash Display', sans-serif;
+  font-size: clamp(1.35rem, 2.8vw, 46px);
+  font-weight: 500;
+  font-style: normal;
+  line-height: clamp(1.6rem, 3.1vw, 49.07px);
+  letter-spacing: 0;
+  text-align: center;
+  color: #ffffff;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.about-highlight {
+  font-family: 'Clash Display', sans-serif;
+  font-size: inherit;
   font-weight: 600;
-  color: #000000;
-  letter-spacing: -0.005em;
-  text-align: left;
+  font-style: normal;
+  line-height: inherit;
+  letter-spacing: 0;
+  color: #ffffff;
 }
 
-.mark9-highlight {
-  color: #ff0000;
-  font-weight: 800;
-}
-
-/* Responsive Styles */
-@media (max-width: 1180px) {
+/* Tablet & Mobile responsive adjustments */
+@media (max-width: 1024px) {
   .about-section {
-    padding: 3rem 2rem;
+    height: 100vh;
+    min-height: 100vh;
+    padding: 0 20px;
   }
 
   .about-container {
-    gap: 2rem;
-  }
-
-  .about-logo-img {
-    max-width: 400px;
-  }
-
-  .about-card {
-    padding: 2.75rem 2rem;
+    padding: 0 clamp(16px, 5vw, 40px);
   }
 
   .about-text {
-    font-size: 1.05rem;
-    line-height: 1.65;
+    font-size: clamp(1.45rem, 4vw, 36px);
+    line-height: 1.22;
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 640px) {
   .about-section {
-    min-height: auto;
-    padding: 4rem 1.5rem;
+    height: 100vh;
+    min-height: 100vh;
+    padding: 0 16px;
   }
 
   .about-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem;
-  }
-
-  .about-logo-wrapper {
-    flex: none;
-    width: 100%;
-    max-width: 380px;
-    padding-bottom: 0;
-  }
-
-  .about-content-wrapper {
-    flex: none;
-    width: 100%;
-    max-width: 580px;
-    padding: 1.5rem 0.5rem;
-    margin-top: 0;
-  }
-}
-
-@media (max-width: 540px) {
-  .about-section {
-    padding: 3rem 1rem;
-  }
-
-  .about-card {
-    padding: 2rem 1.25rem;
-    border-radius: 26px;
-    border-width: 3.5px;
+    padding: 0 12px;
   }
 
   .about-text {
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-
-  .about-quote-svg {
-    width: 46px;
-    height: 38px;
-  }
-
-  .quote-top-left {
-    top: -1.35rem;
-    left: 1rem;
-  }
-
-  .quote-bottom-right {
-    bottom: -1.5rem;
-    right: 1rem;
-  }
-
-  .dots-top, .dots-bottom, .dots-left, .dots-right, .about-outer-frame {
-    display: none;
+    font-size: clamp(1.35rem, 6vw, 28px);
+    line-height: 1.25;
   }
 }
+
+@media (max-width: 380px) {
+  .about-text {
+    font-size: clamp(1.18rem, 5.5vw, 24px);
+    line-height: 1.25;
+  }
+}
+
