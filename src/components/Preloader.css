@@ -1,28 +1,77 @@
-.preloader-container {
+.preloader-wrapper {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #ffd000;
-  background-image: url('/herobg.png');
-  background-size: cover;
-  background-position: center;
   z-index: 99999;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  transition: opacity 0.5s ease, visibility 0.5s;
+  pointer-events: all;
+  overflow: hidden;
 }
 
-.preloader-container.loaded {
-  opacity: 0;
-  visibility: hidden;
+.preloader-wrapper.loaded {
   pointer-events: none;
 }
 
+/* Left & Right Curtain Split Panels (Each 50vw with overflow: hidden) */
+.preloader-curtain {
+  position: absolute;
+  top: 0;
+  width: 50vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #ffd000;
+  background-image: url('/herobg.png');
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  transition: transform 0.9s cubic-bezier(0.76, 0, 0.24, 1);
+  will-change: transform;
+  z-index: 10;
+}
+
+.preloader-curtain-left {
+  left: 0;
+  background-position: left center;
+  transform: translateX(0);
+}
+
+.preloader-curtain-right {
+  right: 0;
+  background-position: right center;
+  transform: translateX(0);
+}
+
+/* 100vw Stage Inside each curtain to align full scene */
+.preloader-stage {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.preloader-stage-left {
+  left: 0;
+}
+
+.preloader-stage-right {
+  right: 0;
+}
+
+/* Split Open Animation on Loaded: Left moves left, Right moves right */
+.preloader-wrapper.loaded .preloader-curtain-left {
+  transform: translateX(-100%);
+}
+
+.preloader-wrapper.loaded .preloader-curtain-right {
+  transform: translateX(100%);
+}
+
+/* Center Content */
 .preloader-content {
   display: flex;
   flex-direction: column;
@@ -31,6 +80,7 @@
   text-align: center;
   max-width: 440px;
   width: 100%;
+  padding: 2rem;
 }
 
 /* Preloader Logo with White-to-Color Fill */
@@ -65,8 +115,8 @@
   width: 100%;
   height: 100%;
   background: transparent;
-  transition: clip-path 0.08s linear;
   pointer-events: none;
+  will-change: clip-path;
 }
 
 .preloader-logo-color {
@@ -92,8 +142,8 @@
   background: #e2007a;
   background: linear-gradient(90deg, #db0073 0%, #e2007a 50%, #ff1493 100%);
   border-radius: 9999px;
-  transition: width 0.08s linear;
   box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.4);
+  will-change: width;
 }
 
 /* Percentage & Status Text */
