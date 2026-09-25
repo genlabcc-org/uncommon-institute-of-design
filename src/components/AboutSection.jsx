@@ -4,7 +4,14 @@ import './AboutSection.css';
 const AboutSection = () => {
   return (
     <section className="about-section" id="about">
-      <div className="about-container">
+      <div className="about-frame-wrapper">
+        {/* Decorative Frame from public/frame.png */}
+        <img
+          src="/frame.png"
+          alt="Decorative Frame"
+          className="about-frame-overlay"
+        />
+
         <div className="about-content">
           <p className="about-text">
             Uncommon Institute of Design, an initiative by{' '}
