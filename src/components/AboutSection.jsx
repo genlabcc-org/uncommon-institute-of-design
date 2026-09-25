@@ -15,9 +15,9 @@ const AboutSection = () => {
         <div className="about-content">
           <p className="about-text">
             Uncommon Institute of Design, an initiative by{' '}
-            <strong className="about-highlight">MaRK9</strong>, is a place for curious minds to explore
+            <strong className="about-highlight">MARK9</strong>, is a place for curious minds to explore
             through experimentation, get guidance from experienced designers, and grow more
-            confident in their ideas. With <strong className="about-highlight">MaRK9’s</strong>{' '}
+            confident in their ideas. With <strong className="about-highlight">MARK9’s</strong>{' '}
             support and community to keep exploring, try new things, and discover where your
             creativity can take you.
           </p>

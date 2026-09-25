@@ -35,7 +35,7 @@ const LearnMoreSection = () => {
           {/* Center: Tamil Typography Headline */}
           <div className="learn-text-wrapper">
             <h2 className="learn-tamil-heading">
-              இன்னும் <span className="learn-tamil-red">எவ்வளவோ</span><br />
+              இன்னும் எவ்வளவோ<br />
               இருக்கு கத்துக்குறதுக்கு
             </h2>
 

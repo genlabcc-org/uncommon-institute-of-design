@@ -35,7 +35,7 @@ const HeroSection = () => {
 
         {/* Venue Information Line */}
         <p className="hero-venue-text">
-          <strong>Venue:</strong> 2nd Floor, MaRK 9 Office, Chettikulam
+          <strong>Venue:</strong> 2nd Floor, MARK 9 Office, Chettikulam
         </p>
 
         {/* Purple Rounded Register Now Button */}
